@@ -71,13 +71,5 @@ public class Prodotto {
         return this.prezzo + (this.prezzo * iva / 100);
     }
 
-    public static void main(String[] args){
-        Prodotto prodotto = new Prodotto(1234, "Smartphone", "Apple", 1200.00, 20.00);
-
-        System.out.println(prodotto.getPrezzoBase());
-        System.out.println(prodotto.getPrezzoConIva());
-
-    }
-
 
 }
