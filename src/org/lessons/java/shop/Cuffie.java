@@ -14,13 +14,5 @@ public class Cuffie extends Prodotto{
         this.wireless = wireless;
     }
 
-    public static void main(String[] args){
-        Cuffie airpods = new Cuffie(51233, "Airpods", "Apple", 200.00, 10.00, "rosa", true);
-
-        System.out.println(airpods.getPrezzoBase());
-        System.out.println(airpods.getPrezzoConIva());
-        System.out.println(airpods.colore);
-
-    }
 
 }

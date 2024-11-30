@@ -15,12 +15,4 @@ public class Televisori extends Prodotto{
     }
 
 
-    public static void main(String[] args){
-        Televisori televisore = new Televisori(526153, "Smart TV", "Samsung", 600.00, 15.00, 50, true);
-
-        System.out.println(televisore.getPrezzoBase());
-        System.out.println(televisore.getPrezzoConIva());
-        System.out.println(televisore.smart);
-
-    }
 }

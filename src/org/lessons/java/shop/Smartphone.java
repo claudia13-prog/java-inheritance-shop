@@ -15,15 +15,4 @@ public class Smartphone extends Prodotto{
         this.memoria = memoria;
     }
     
-    public static void main(String[] args){
-        Smartphone iphone = new Smartphone(1234, "Iphone", "Apple", 1200.00, 20.00, 5267162, 8);
-
-        System.out.println(iphone.getPrezzoBase());
-        System.out.println(iphone.getPrezzoConIva());
-        System.out.println(iphone.getNome());
-        System.out.println(iphone.imei);
-
-
-
-    }
 }
