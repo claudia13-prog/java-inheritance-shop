@@ -63,19 +63,16 @@ public class Carrello {
                     }
                     
                 }else if(isLoyalty.equals("Si")){
-                    
+                    System.out.println("Vai al carrello:");
+
                     for(Prodotto prodotto : carrello){
                         if(prodottoScelto.equals("Smartphone") && memoriaScelta < 32){
-                            System.out.println("Vai al carrello:");
                             System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(5));
                         }else if(prodottoScelto.equals("Televisore") && isSmart.equals("No")){
-                            System.out.println("Vai al carrello:");
                             System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(10));
                         }else if(prodottoScelto.equals("Cuffie") && isWireless.equals("No")){
-                            System.out.println("Vai al carrello:");
                             System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(7));
                         }else{
-                            System.out.println("Vai al carrello:");
                             System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(2));
 
                         }
