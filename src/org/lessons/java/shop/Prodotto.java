@@ -72,7 +72,7 @@ public class Prodotto {
     }
 
     //BONUS
-    //per il calcolo del prezzo scontato per clienti con tessera fedeltà, che applica al prezzo uno sconto del 2%
+    //metodo per il calcolo del prezzo scontato per clienti con tessera fedeltà, che applica al prezzo uno sconto del 2%
     public double getPrezzoScontato(int sconto){
         double prezzoConIva = this.prezzo + (this.prezzo * iva / 100);
         return prezzoConIva - (prezzoConIva * sconto / 100);
