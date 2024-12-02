@@ -23,15 +23,21 @@ public class Carrello {
                 String prodottoScelto = scanner.nextLine();
 
                 if(prodottoScelto.equals("Smartphone")){
-                    Smartphone smartphone = new Smartphone(124152, "iphone", "Apple", 800.00, 22.0, 24335430, 8);
+                    System.out.println("Scrivi la quantità di memoria dello smartphone desiderata");
+                    int memoriaScelta = scanner.nextInt();
+                    Smartphone smartphone = new Smartphone(124152, "iphone", "Apple", 800.00, 22.0, 24335430, memoriaScelta);
                     carrello.add(smartphone);
 
                 }else if(prodottoScelto.equals("Televisore")){
-                    Televisori televisore = new Televisori(5463435, "smart tv", "Samsung", 900.00, 22.00, 50, true);
+                    System.out.println("Vuoi che sia smart?");
+                    String isSmart = scanner.nextLine();
+                    Televisori televisore = new Televisori(5463435, "smart tv", "Samsung", 900.00, 22.00, 50, isSmart);
                     carrello.add(televisore);
 
                 }else if(prodottoScelto.equals("Cuffie")){
-                    Cuffie cuffie = new Cuffie(65732738, "airpods", "Apple", 200.00, 22.00, "rosa", true);
+                    System.out.println("Vuoi le cuffie wireless?");
+                    String isWireless = scanner.nextLine();
+                    Cuffie cuffie = new Cuffie(65732738, "airpods", "Apple", 200.00, 22.00, "rosa", isWireless);
                     carrello.add(cuffie);
 
                 }
