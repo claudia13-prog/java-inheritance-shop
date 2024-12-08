@@ -19,6 +19,10 @@ public class Carrello {
         String isSmart = "";
         String isWireless = "";
 
+        //oggetti
+        Processore processore1 = new Processore();
+        Schermo display = new Schermo();
+
 
         while(scelta.equals("Si")){
 
@@ -32,14 +36,14 @@ public class Carrello {
                 if(prodottoScelto.equals("Smartphone")){
                     System.out.println("Scrivi la quantità di memoria dello smartphone desiderata");
                     memoriaScelta = scanner.nextInt();
-                    Smartphone smartphone = new Smartphone(124152, "iphone", "Apple", 800.00, 22.0, 24335430, memoriaScelta);
-                    carrello.add(smartphone);
                     scanner.nextLine();
+                    Smartphone smartphone = new Smartphone(124152, "iphone", "Apple", 800.00, 22.0, 24335430, memoriaScelta, processore1, display);
+                    carrello.add(smartphone);
 
                 }else if(prodottoScelto.equals("Televisore")){
                     System.out.println("Vuoi che sia smart?");
                     isSmart = scanner.nextLine();
-                    Televisori televisore = new Televisori(5463435, "smart tv", "Samsung", 900.00, 22.00, 50, isSmart);
+                    Televisori televisore = new Televisori(5463435, "smart tv", "Samsung", 900.00, 22.00, 50, isSmart, display);
                     carrello.add(televisore);
 
                 }else if(prodottoScelto.equals("Cuffie")){
@@ -66,36 +70,31 @@ public class Carrello {
                     System.out.println("Vai al carrello:");
 
                     for(Prodotto prodotto : carrello){
-                        if(prodottoScelto.equals("Smartphone") && memoriaScelta < 32){
-                            System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(5));
-                        }else if(prodottoScelto.equals("Televisore") && isSmart.equals("No")){
-                            System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(10));
-                        }else if(prodottoScelto.equals("Cuffie") && isWireless.equals("No")){
-                            System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(7));
-                        }else{
-                            System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato(2));
-
+                            System.out.println(prodotto.getNome() + " $" + prodotto.getPrezzoScontato());
                         }
 
 
                     }
                  
                 }
-
+        
                 
-                break;
-                }
+                
+                //break;
+            }
 
             
+        scanner.close();
 
 
 
         }
 
+    
 
-        scanner.close();
+        
 
 
     }
 
-}
+

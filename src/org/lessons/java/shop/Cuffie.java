@@ -14,5 +14,14 @@ public class Cuffie extends Prodotto{
         this.wireless = wireless;
     }
 
+    //override
+    public double getPrezzoScontato(){
+        if(this.wireless.equals("No")){
+            double prezzoConIva = super.getPrezzoConIva();
+            return prezzoConIva - (prezzoConIva * 7 / 100);
+        }else{
+            return super.getPrezzoScontato();
+        }
+    }
 
 }
